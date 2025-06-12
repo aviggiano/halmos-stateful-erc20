@@ -1,8 +1,8 @@
-# halmos-stateful-erc20
+## halmos-stateful-erc20
 
 Stateful Halmos tests for ERC20 tokens
 
-## Tests
+### Tests
 
 Foundry
 
@@ -16,7 +16,9 @@ Halmos
 halmos
 ```
 
-## Disclaimer
+This will test the invariant `SUM(balanceOf) == totalSupply` for `ERC20` and `ERC20Buggy` contracts
+
+### Disclaimer
 
 This code is provided "as is" and has not undergone a formal security audit.
 
