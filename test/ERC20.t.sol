@@ -39,11 +39,11 @@ contract ERC20Test is Test {
     /// @custom:halmos --invariant-depth 10 --loop 10
     function invariant_sum_balanceOf_eq_totalSupply() public view {
         for (uint256 i = 0; i < handlers.length; i++) {
-            uint256 totalBalance = 0;
+            uint256 sumBalanceOf = 0;
             for (uint256 j = 0; j < targets.length; j++) {
-                totalBalance += handlers[i].balanceOf(targets[j]);
+                sumBalanceOf += handlers[i].balanceOf(targets[j]);
             }
-            assertEq(totalBalance, handlers[i].totalSupply());
+            assertEq(sumBalanceOf, handlers[i].totalSupply());
         }
     }
 }
